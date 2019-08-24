@@ -1,5 +1,11 @@
 # Git-commands
 
+#Clone repository
+git clone https://github.com/baluamjuri/Git-commands.git GitCommands
+
+#Status of the untracked, tracked, staged and unstaged files
+git status
+
 git stash
 git pull
 
