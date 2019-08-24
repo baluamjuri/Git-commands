@@ -25,6 +25,9 @@ git commit -m"adding new commands to the notes"
 #Push to publish your local commits
 git push
 
+#List all files in the repository
+ls
+
 git stash
 git pull
 
@@ -51,6 +54,9 @@ git checkout -b feature-security-usermgmt-restendpoints
 
 #To delete a branch locally
 git branch -d feature-security-usermgmt-restendpoints
+
+#To delete a remote branch
+git push --delete origin feature/samplebranch
 
 #show all remote branches
 git branch -r
