@@ -3,8 +3,17 @@
 #Clone repository
 git clone https://github.com/baluamjuri/Git-commands.git GitCommands
 
-#Status of the untracked, tracked, staged and unstaged files
+#Status of the untracked/unstaged, tracked/staged
 git status
+
+#Add or track the files
+git add gitcommands.txt
+git add *.java
+git add 'filename with spaces.txt'
+
+#Make the tracked files untracked
+git restore --staged .
+git restore --staged *.txt
 
 git stash
 git pull
