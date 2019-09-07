@@ -1,0 +1,94 @@
+# Git-commands
+
+#Initialising Git repo from local
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/baluamjuri/AppWithStandards.git
+git push -u origin master
+
+#Clone repository
+git clone https://github.com/baluamjuri/Git-commands.git GitCommands
+cd GitCommands
+
+#Cloning specific branch
+git clone --single-branch --branch <branchname> <remote-repo>
+
+#Status of the untracked/unstaged, tracked/staged
+git status
+
+#Add or track the files
+git add gitcommands.txt
+git add *.java
+git add 'filename with spaces.txt'
+
+#Make the staged files unstaged
+git restore --staged .
+git restore --staged *.txt
+
+#Remove file 
+rm -f gitcommands.txt
+
+#Commit with message
+git commit -m"adding new commands to the notes"
+
+#Push to publish your local commits
+git push
+
+#List all files in the repository
+ls
+
+#Stash(save) changes in a dirty working directory
+git stash
+
+#Remove all stashed entries
+git stash clear	
+
+git pull
+
+#automerge saved changes (If any conflicts then resolve it)
+git stash pop 
+
+git push
+
+#to uncommit the changes
+git reset --soft HEAD~ 
+
+#to untrack a tracked file
+git rm --cached filename 
+
+#To switch to branch
+git checkout redsky_UFE18R8_sprint3
+
+#To create and switch to a branch
+git checkout -b feature/feature-sprint3
+
+#To delete a branch locally
+git branch -d feature-security-usermgmt-restendpoints
+
+#To delete a remote branch
+git push --delete origin feature/samplebranch
+
+#show all remote branches
+git branch -r
+
+#shows all local and remote branches
+git branch -a
+
+#creates a file in local repository
+touch filename.extension 
+
+#Merge a branch into the active branch
+git merge [branch name]	
+
+#Merge a branch into a target branch
+git merge [source branch] [target branch] 
+
+#View changes
+git log	
+
+#View changes (detailed)
+git log --summary 
+
+#Preview changes before merging
+git diff [source branch] [target branch} 
