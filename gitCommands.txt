@@ -63,6 +63,9 @@ git checkout redsky_UFE18R8_sprint3
 #To create and switch to a branch
 git checkout -b feature/feature-sprint3
 
+#Create a branch 'branch1' under dev (create branch from another branch)
+git checkout -b branch1 dev
+
 #To delete a branch locally
 git branch -d feature-security-usermgmt-restendpoints
 
