@@ -72,6 +72,11 @@ git branch -d feature-security-usermgmt-restendpoints
 #To delete a remote branch
 git push --delete origin feature/samplebranch
 
+#To push the current branch and set the remote as upstream, use
+git push --set-upstream origin branchname
+(or)
+git push -u origin branchname
+
 #show all remote branches
 git branch -r
 
