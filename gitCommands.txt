@@ -100,3 +100,123 @@ git log --summary
 
 #Preview changes before merging
 git diff [source branch] [target branch} 
+
+============================================================
+
+git clone as;ldkfjurl.git
+git init
+git add
+git commit
+	git commit
+	git commit -v
+	git commit -m "message"
+
+Life cycle
+	git status
+	git status -s
+	??
+	A - Staging area
+	M - Modified 
+	Untracked
+	Tracked
+	  Unmodified
+	  modified
+	  staged
+	push
+
+.gitignore
+	About.txt
+	*.class
+	!main.js
+	/contact.txt
+	
+diff
+	git diff --staged
+	git diff --cached
+
+
+log history
+	git log
+	git log -p
+	git log -3
+	git log --pretty=oneline or git log --oneline
+	git log --pretty=short
+	git log --pretty=full
+	git log --pretty=fuler
+	
+Branching
+	master, root commit, sha1
+	For every commit - snapshot(tree, parent, author, committer)
+	git branch name
+	HEAD 
+	git checkout branchname
+	git log --oneline --all
+	git log --oneline --all --graph
+	git checkout -b branchname
+	git merge child-branch
+	git branch -d branchname
+	merge strategies(fast-forward, recursive)
+	git branch --merge
+	git branch --no-merge
+	git branch -a
+	
+Remote branching
+	git remote
+	git fetch origin
+	git pull origin master  -> (fetch + merge)
+	git push origin master
+
+Difference
+Aliases
+	git config --global alias.graph "log --oneline --all --graph"
+Rebase vs merge
+	git rebase
+	rebase vs merge -> difference is with commit history or graph
+	git rebase --continue
+	git rebase --abort
+
+cherry-pick
+	git cherry-pick 4d3afebd6cc86f79da9050d283adf293d6dd1627
+
+Stashing
+	git stash or git stash push
+	git stash list
+	git stash apply
+	git stash drop
+	git stash apply stash@{1}
+	git stash pop -> (apply+drop)
+	//Stash untracked files 
+	git stash -u
+	//Create a branch on stashed commit
+	git stash branch branchname
+
+cleaning
+	//Removes files permanently, Clean works only on untracked and ignored files 
+	//Clean untracked files forcefully
+	git clean -f
+	//clean untracked and ignored files or directories forcefully
+	git clean -f -d or git clean -fd
+	//clean untracked and ignored files or directories forcefully
+	git clean -f -d -x 
+	//Dry run on cleaning
+	git clean --dry-run or git clean -n
+
+Tagging
+	//List all tags
+	git tag -l or git tag 
+	//Create tag
+	git tag tagname
+	//Create tag with a message called annotated tag
+	git tag -a tagname
+	//Difference between two tags
+	git diff tag1 tag2
+	//Delete a tag
+	git tag -d tagname
+	//Create tag at a particular commit
+	git tag -a tagname commitid
+	//Update tag to at different commit
+	git tag -a tagname -f commitid
+	git push origin tagname
+	git push origin --tags
+	//pattern search
+	git tag --list "v1.*"
